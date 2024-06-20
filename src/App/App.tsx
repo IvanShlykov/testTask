@@ -3,7 +3,7 @@ import './App.css';
 import Listbox from '../features/Listbox/components/Listbox';
 import CardUser from '../features/Card/components/Card';
 import type { User } from './types';
-import Header from '../Header/components/Header';
+import Header from '../features/Header/components/Header';
 import { Container } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -14,6 +14,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [users, setUsers] = useState<User[]>([]);
   const [theme, setTheme] = useState(false);
+  
   const darkTheme = createTheme({
     palette: {
       mode: theme ? 'dark' : 'light',
